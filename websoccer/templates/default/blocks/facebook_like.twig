@@ -1,6 +1,7 @@
 {% if env.getConfig("facebook_enable_likebutton") %}
 	{% set url = env.getInternalUrl(null, "id=" ~ env.getRequestParameter("id"), TRUE) %}
 
-	<div class="fb-like" data-href="{{ url }}" 
-		data-width="450" data-show-faces="true" data-send="true" style="margin-top: 20px"></div>
+	<div class="fb-like" data-href="{{ url }}" data-width="450" data-layout="button_count" style="margin-top: 20px"></div>
+	<div class="fb-share-button" data-href="{{ url }}" data-layout="button_count"></div>
+
 {% endif %}
